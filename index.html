@@ -47,57 +47,98 @@
             font-weight: bold;
         }
 
-        .dotsWrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding-top: 20px;
+        .loadingContainer1 {
+            position: relative;
+            margin: 20px auto 50px auto;
+            width: 110px;
         }
 
-        .dot {
-            width: 10px;
+        .loadingContainer1 div {
             height: 10px;
-            margin: 0 5px;
-            background-color: transparent;
+            width: 10px;
             border-radius: 50%;
-            animation-name: loadingDots;
-            animation-duration: 3500ms;
-            animation-iteration-count: infinite;
+            float: left;
+            margin: 0 5px;
+            background: #FF3434;
+            transform: scale(0);
         }
 
-        .dotOne {
-            animation-delay: 300ms;
+        .loadingContainer1 .ball1 {
+            z-index: 1;
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
         }
 
-        .dotTwo {
-            animation-delay: 600ms;
+        .loadingContainer1 .ball2 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
         }
 
-        .dotThree {
-            animation-delay: 900ms;
+        .loadingContainer1 .ball3 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
         }
 
-        .dotFour {
-            animation-delay: 1200ms;
+        .loadingContainer1 .ball4 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
         }
 
-        @keyframes loadingDots {
+        @-moz-keyframes grow {
             0% {
-                background-color: transparent;
+                -moz-transform: scale(0);
+            }
+
+            25% {
+                -moz-transform: scale(1);
             }
 
             50% {
-                background-color: #FF3434;
+                -moz-transform: scale(0);
             }
 
             75% {
-                background-color: transparent;
+                -moz-transform: scale(1);
+                background: #FF3434;
             }
 
             100% {
-                background-color: transparent;
+                -moz-transform: scale(0);
+                background: #FF3434;
             }
         }
+
+        @-webkit-keyframes grow {
+            0% {
+                -webkit-transform: scale(0);
+            }
+
+            25% {
+                -webkit-transform: scale(1);
+            }
+
+            50% {
+                -webkit-transform: scale(0);
+            }
+
+            75% {
+                -webkit-transform: scale(1);
+                background: #FF3434;
+            }
+
+            100% {
+                -webkit-transform: scale(0);
+                background: #FF3434;
+            }
+        }
+
+
 
         .break {
             display: none;
@@ -136,11 +177,11 @@
     <div class="main_body">
         <h1>Searching for Clearance Prices <br class="break" /> from dealers in <span>99506</span></h1>
 
-        <div class="dotsWrapper">
-            <div class="dot dotOne"></div>
-            <div class="dot dotTwo"></div>
-            <div class="dot dotThree"></div>
-            <div class="dot dotFour"></div>
+        <div class="loadingContainer1">
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+            <div class="ball4"></div>
         </div>
 
     </div>
