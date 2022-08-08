@@ -1,0 +1,128 @@
+.loaderWrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        .loaderWrapper h1 {
+            font-size: 26px;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .loaderWrapper h1 span {
+            color: #0C317A;
+            font-weight: bold;
+        }
+
+        .loadingContainer1 {
+            position: relative;
+            margin: 20px auto 50px auto;
+            width: 110px;
+        }
+
+        .loadingContainer1 div {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            float: left;
+            margin: 0 5px;
+            background: #FF3434;
+            transform: scale(0);
+        }
+
+        .loadingContainer1 .ball1 {
+            z-index: 1;
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+        }
+
+        .loadingContainer1 .ball2 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        .loadingContainer1 .ball3 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+
+        .loadingContainer1 .ball4 {
+            -moz-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation: grow 4.4s infinite ease-in-out;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+
+        @-moz-keyframes grow {
+            0% {
+                -moz-transform: scale(0);
+            }
+
+            25% {
+                -moz-transform: scale(1);
+            }
+
+            50% {
+                -moz-transform: scale(0);
+            }
+
+            75% {
+                -moz-transform: scale(1);
+                background: #FF3434;
+            }
+
+            100% {
+                -moz-transform: scale(0);
+                background: #FF3434;
+            }
+        }
+
+        @-webkit-keyframes grow {
+            0% {
+                -webkit-transform: scale(0);
+            }
+
+            25% {
+                -webkit-transform: scale(1);
+            }
+
+            50% {
+                -webkit-transform: scale(0);
+            }
+
+            75% {
+                -webkit-transform: scale(1);
+                background: #FF3434;
+            }
+
+            100% {
+                -webkit-transform: scale(0);
+                background: #FF3434;
+            }
+        }
+
+
+
+        .break {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .main_body h1 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .break {
+                display: block;
+            }
+        }
